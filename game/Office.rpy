@@ -1,4 +1,5 @@
 label Your_Office:
+    hide screen Buildings
     scene office
     show screen Your_Office
     show screen Student_stat
@@ -15,10 +16,19 @@ label Test:
     "Hello World!"
     jump Your_Office
 
-label Hide_everything:
+label Test0:
     hide screen Your_Office
     hide screen Student_stat
     hide screen Datetime
     hide screen Functions
     pause
     jump Your_Office
+
+label Buildings:
+    hide screen Your_Office
+    hide screen Student_stat
+    hide screen Datetime
+    hide screen Functions
+    show screen Buildings
+    pause
+    jump Buildings

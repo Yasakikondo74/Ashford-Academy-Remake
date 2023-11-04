@@ -194,7 +194,7 @@ screen Functions:
                 xalign 0.5
                 xsize 1.0
                 text_style "custom_textbutton_text"
-            textbutton "Buildings" action Jump("Test0") style "custom_textbutton":
+            textbutton "Buildings" action Jump("Buildings") style "custom_textbutton":
                 xalign 0.5
                 xsize 1.0
                 text_style "custom_textbutton_text"
@@ -214,6 +214,42 @@ screen Functions:
                 xalign 0.5
                 xsize 1.0
                 text_style "custom_textbutton_text" 
+
+screen Buildings:
+    if s.upgrade_building_image == "classroom":
+        add "building_classrooms.jpg":
+            xalign 0.9
+    elif s.upgrade_building_image == "dormitory":
+        add "building_dormitory.jpg":
+            xalign 0.9
+    else:
+        add "blank.png"
+    vbox:
+        frame:
+            textbutton "Buildings"
+        frame:
+            textbutton "Bath Area"
+                #action Show("")
+        frame:
+            textbutton "Classroom":
+                action SetField(persistent, s.upgrade_building_image, "classroom")
+        frame:
+            textbutton "Dormitory":
+                action SetField(persistent, s.upgrade_building_image, "dormitory")
+        frame:
+            textbutton "Gym"
+        frame:
+            textbutton "Library"
+        frame:
+            textbutton "Pool"
+        frame:
+            textbutton "School Groudns"
+        frame:
+            textbutton "Security"
+        frame:
+            textbutton "Sports Fields"
+        textbutton "Back":
+            action Jump("Your_Office")
 
 init python:
     # Functions custom_textbutton #

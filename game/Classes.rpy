@@ -1,6 +1,7 @@
 define unknown = Character("???")
 define C = Character("Creator")
 image office = Transform("images/ashford.jpg", size = (1920, 1080))
+image building_classrooms = Transform("images/building_classrooms.jpg", size = (1920, 1080))
 image dp_frame = "gui/dp_frame.png"
 
 init python:
@@ -87,6 +88,7 @@ init python:
             self.bath = 0
             self.club = False
             self.sex_education = False
+            self.upgrade_building_image = "classroom"
 
             # SCHOOL STATS #
             self.hygiene = "clean"
