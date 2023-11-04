@@ -1,7 +1,17 @@
 define unknown = Character("???")
 define C = Character("Creator")
-image office = Transform("images/ashford.jpg", size = (1920, 1080))
+image ashford = Transform("images/ashford.jpg", size = (1920, 1080))
 image building_classrooms = Transform("images/building_classrooms.jpg", size = (1920, 1080))
+image building_dormitory = Transform("images/building_dormitory.jpg", size = (1920, 1080))
+image building_bath_area = Transform("images/building_bath.jpg", size = (1920, 1080))
+image building_cafeteria = Transform("images/building_cafeteria.jpg", size = (1920, 1080))
+image building_security = Transform("images/building_security.jpg", size = (1920, 1080))
+image building_gym = Transform("images/building_gym.jpg", size = (1920, 1080))
+image building_school_grounds = Transform("images/building_grounds.jpg", size = (1920, 1080))
+image building_library = Transform("images/building_library.jpg", size = (1920, 1080))
+image building_pool = Transform("images/building_pool.jpg", size = (1920, 1080))
+image building_sport_field = Transform("images/building_sports_field.jpg", size = (1920, 1080))
+image building_surveillance = Transform("images/building_surveillance.jpg", size = (1920, 1080))
 image dp_frame = "gui/dp_frame.png"
 
 init python:
@@ -32,6 +42,7 @@ init python:
             self.inhibition = 100.0
             self.deviance = 0.0
             self.inhibition_lvl = 0
+            self.lust = 0
 
         def capped(self):
             if self.behavior >= 100.0:
@@ -76,6 +87,7 @@ init python:
             self.class_size = "big"
 
             # SCHOOL UPGRADES #
+            self.surveillance_option = False
             self.classroom = 1
             self.cafeteria = 0
             self.dorm = 0
