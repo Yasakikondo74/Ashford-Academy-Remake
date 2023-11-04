@@ -10,7 +10,7 @@ label Your_Office:
 
 label Test:
     $ s.next_day()
-    if s.student_enter ==     True:
+    if s.student_enter == True:
         $ s.student_enter = False
         $ s.Student_population()
     "Hello World!"

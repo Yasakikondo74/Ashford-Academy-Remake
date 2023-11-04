@@ -9,27 +9,32 @@ screen Your_Office:
                 style "your_text_style2"
                 xalign 0.5
             text ""
-            textbutton "Test":
-                xalign 0.5
-                action SetField(persistent, mc.morning, "none")
             text ""
             textbutton "Office":
                 yanchor 0.35
                 xalign 0.5
                 action SetField(persistent, mc.morning, "office")
-            if s.cafeteria >= 1:
+                hovered Show("placeholder_text0", displayText = "Talk to your staff member\nto increase staff support\n\n+ staff support")
+                unhovered Hide("placeholder_text0")
+            if s.cafeteria >= 0:
                 textbutton "Cafeteria":
                     xalign 0.5
                     action SetField(persistent, mc.morning, "cafeteria")
-            if s.library >= 1:
+                    hovered Show("placeholder_text0", displayText = "Visit the Cafeteria\n\n+ Behavior")
+                    unhovered Hide("placeholder_text0")
+            if s.library >= 0:
                 textbutton "Library":
                     xalign 0.5
                     action SetField(persistent, mc.morning, "library")
-            if s.sex_education >= 1:
+                    hovered Show("placeholder_text0", displayText = "Visit the Library\n\n+ Academic\n+ Behavior")
+                    unhovered Hide("placeholder_text0")
+            if s.sex_education >= 0:
                 textbutton "Sex\nEducation":
                     text_textalign 0.5
                     xalign 0.5
                     action SetField(persistent, mc.morning, "sex education")
+                    hovered Show("placeholder_text0", displayText = "Give your student a teaching\nabout sex education\n+ Inhibition")
+                    unhovered Hide("placeholder_text0")
         # Afternoon #
         vbox:
             xalign 0.5 yalign 0.05
@@ -37,27 +42,32 @@ screen Your_Office:
                 style "your_text_style2"
                 xalign 0.5
             text ""
-            textbutton "Test":
-                xalign 0.5
-                action SetField(persistent, mc.afternoon, "none")
             text ""
             textbutton "Classroom":
                 yanchor 0.35
                 xalign 0.5
                 action SetField(persistent, mc.afternoon, "classroom")
-            if s.sport_field >= 1:
+                hovered Show("placeholder_text0", displayText = "Visit the Cafeteria\n\n+ Behavior")
+                unhovered Hide("placeholder_text0")
+            if s.sport_field >= 0:
                 textbutton "Sport Field":
                     action SetField(persistent, mc.afternoon, "sport field")
-            if s.gym >= 1:
+                    hovered Show("placeholder_text0", displayText = "Visit the Cafeteria\n\n+ Behavior")
+                    unhovered Hide("placeholder_text0")
+            if s.gym >= 0:
                 textbutton "Gym":
                     xalign 0.5
                     action SetField(persistent, mc.afternoon, "gym")
+                    hovered Show("placeholder_text0", displayText = "Visit the Cafeteria\n\n+ Behavior")
+                    unhovered Hide("placeholder_text0")
             text ""
-            if s.pool >= 1:
+            if s.pool >= 0:
                 textbutton "Pool":
                     yanchor 0.35
                     xalign 0.5
                     action SetField(persistent, mc.afternoon, "pool")
+                    hovered Show("placeholder_text0", displayText = "Visit the Cafeteria\n\n+ Behavior")
+                    unhovered Hide("placeholder_text0")
         # Evening # 
         vbox:
             xalign 0.95 yalign 0.05
@@ -65,27 +75,32 @@ screen Your_Office:
                 style "your_text_style2"
                 xalign 0.5
             text ""
-            textbutton "Test":
-                xalign 0.5
-                action SetField(persistent, mc.evening, "none")
             textbutton "School\nGrounds":
                 xalign 0.5
                 text_textalign 0.5
                 action SetField(persistent, mc.evening, "school grounds")
-            if s.dorm >= 1:
+                hovered Show("placeholder_text0", displayText = "Visit the Cafeteria\n\n+ Behavior")
+                unhovered Hide("placeholder_text0")
+            if s.dorm >= 0:
                 textbutton "Dormitory":
                     xalign 0.5
                     action SetField(persistent, mc.evening, "dormitory")
-            if s.bath >= 1:
+                    hovered Show("placeholder_text0", displayText = "Visit the Cafeteria\n\n+ Behavior")
+                    unhovered Hide("placeholder_text0")
+            if s.bath >= 0:
                 textbutton "Bath":
                     xalign 0.5
                     action SetField(persistent, mc.evening, "bath")  
+                    hovered Show("placeholder_text0", displayText = "Visit the Cafeteria\n\n+ Behavior")
+                    unhovered Hide("placeholder_text0")
             text ""   
-            if s.club == True:
+            if s.club == False:
                 textbutton "Club":
                     yanchor 0.35
                     xalign 0.5
-                    action SetField(persistent, "evening", "club")  
+                    action SetField(persistent, mc.evening, "club")  
+                    hovered Show("placeholder_text0", displayText = "Visit the Cafeteria\n\n+ Behavior")
+                    unhovered Hide("placeholder_text0")
     frame:
         xalign 0.5
         yalign 0.75
@@ -160,12 +175,24 @@ screen Datetime:
         vbox:
             yalign 0.9
             xalign 0.1
-            text "Money:":
-                style "your_text_style1"
-            text "Reputation:":
-                style "your_text_style1"
-            text "Staff Support:":
-                style "your_text_style1"
+            textbutton "Money:":
+                yanchor -0.5
+                text_color "#50b0ff"
+                action Jump("Your_Office")
+                hovered Show("placeholder_text0", displayText = "This show how much $$$ you have\nYou can use this to buy more buildings")
+                unhovered Hide("placeholder_text0")
+            textbutton "Reputation:":
+                yanchor -0.3
+                text_color "#50b0ff"
+                action Jump("Your_Office")
+                hovered Show("placeholder_text0", displayText = "This show how popular your school are\nThis can help you attract more student\nto your school to generate revenue")
+                unhovered Hide("placeholder_text0")
+            textbutton "Staff Support:":
+                yanchor -0.075
+                text_color "#50b0ff"
+                action Jump("Your_Office")
+                hovered Show("placeholder_text0", displayText = "This show how much support\nyou have from your staff\nYou can use the power to enforce rules\nor policies to your school")
+                unhovered Hide("placeholder_text0")
         vbox:
             yalign 0.9
             xalign 0.9
@@ -179,8 +206,7 @@ screen Datetime:
         text "[s.weekday_name], [s.month_name][s.day_name] [s.year_name]"
 
 screen Functions:
-    frame:
-        xalign 0.025
+    frame at move_from_left:
         yalign 0.5
         xsize 0.2
         background Solid("#001c7966")
@@ -224,7 +250,7 @@ screen Buildings:
             xalign 0.9
     else:
         add "blank.png"
-    vbox:
+    vbox at move_from_left:
         frame:
             textbutton "Buildings"
         frame:
@@ -250,6 +276,24 @@ screen Buildings:
             textbutton "Sports Fields"
         textbutton "Back":
             action Jump("Your_Office")
+
+screen placeholder_text0:
+    default displayText0 = ""
+    vbox:
+        xalign 0.025
+        yalign 0.025
+        frame:
+            text displayText
+
+transform move_from_left:
+    on show:
+        xalign -0.5
+        linear 0.5 xalign 0.025
+    on hide:
+        xalign 0.025
+        linear 0.5 xalign -0.5
+
+
 
 init python:
     # Functions custom_textbutton #
