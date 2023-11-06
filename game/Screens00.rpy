@@ -19,7 +19,7 @@ screen Your_Office:
             if s.gym >= 0:
                 textbutton "Gym":
                     xalign 0.5
-                    action SetField(persistent, mc.afternoon, "gym")
+                    action SetField(persistent, mc.morning, "gym")
                     hovered Show("placeholder_text0", displayText = "Check out gymnastic\n\n+ Athlethic\n-Inhibition")
                     unhovered Hide("placeholder_text0")
             if s.library >= 0:
@@ -65,7 +65,7 @@ screen Your_Office:
                 textbutton "Cafeteria":
                     yanchor 0.35
                     xalign 0.5
-                    action SetField(persistent, mc.morning, "cafeteria")
+                    action SetField(persistent, mc.afternoon, "cafeteria")
                     hovered Show("placeholder_text0", displayText = "Chill and eat at the Cafeteria\n\n+ Behavior\n+ Morale\n- Athlethic")
                     unhovered Hide("placeholder_text0")
         # Evening # 
@@ -108,7 +108,7 @@ screen Your_Office:
         vbox:
             textbutton "Next":
                 text_style "your_text_style"
-                action Jump("Test")
+                action Jump("Next")
 
 screen Student_stat:
     frame at move_from_right:
