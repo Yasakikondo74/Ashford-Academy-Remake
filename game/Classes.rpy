@@ -88,6 +88,7 @@ init python:
 
             # SCHOOL UPGRADES #
             self.surveillance_option = False
+            self.surveillance = 1
             self.classroom = 1
             self.cafeteria = 0
             self.dorm = 0
