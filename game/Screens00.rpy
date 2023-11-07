@@ -106,7 +106,7 @@ screen Your_Office:
         yalign 0.75
         #background Solid("#001c7966")    
         vbox:
-            textbutton "Next":
+            textbutton "Done Planning":
                 text_style "your_text_style"
                 action Jump("Next")
 
@@ -285,6 +285,15 @@ screen Functions:
                 text_style "custom_textbutton_text" 
 
 screen Buildings:
+    frame at fading:
+        xsize 0.135
+        ysize 0.06
+        xalign 0.935
+        yalign 0.05
+        textbutton "Buy/Upgrades":
+            action Jump("Buildings")
+            text_style "custom_textbutton_text0"
+            style "custom_textbutton0"
     vbox at move_from_left:
         spacing 10
         frame:
@@ -301,8 +310,8 @@ screen Buildings:
                 Hide("classroom"), Hide("dormitory"), Hide("gym"), Hide("library"), Hide("cafeteria"),
                 Hide("pool"), Hide("school_grounds"), Hide("security"), Hide("surveillance"),
                 Hide("sports_field"), Show("bath_area")]
-                hovered Show("placeholder_texts", displayTexts = "Level [s.bath]")
-                unhovered Hide("placeholder_texts")
+                hovered Show("placeholder_text10", displayText10 = "Level [s.bath]")
+                unhovered Hide("placeholder_text10")
                 text_style "custom_textbutton_text0"
                 style "custom_textbutton0"
         frame:
@@ -424,4 +433,4 @@ screen Buildings:
                 Hide("pool"), Hide("school_grounds"), Hide("security"), Hide("surveillance"),
                 Hide("cafeteria"), Hide("library"), Hide("sports_field"), Jump("Your_Office")]
                 text_style "custom_textbutton_text0"
-                style "custom_textbutton0"
+                style "custom_textbutton0"         

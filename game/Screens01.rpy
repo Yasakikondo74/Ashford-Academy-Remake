@@ -11,6 +11,11 @@ screen classroom:
         background Solid("#00000073")
         textbutton "Quality, equipment and state of your classrooms.\nGood classrooms will help your students academically.\nThey are also more enjoyable to teach in {b}Afternoon{b}":
             text_color "#FFFFFF"
+    frame at move_from_right_cost:
+        xalign 0.905
+        yalign 0.15
+        textbutton "Cost: $$$":
+            text_color "#FFFFFF"    
 screen dormitory:
     frame at fading:
         xalign 0.5
@@ -18,12 +23,17 @@ screen dormitory:
         add Frame("building_dormitory.jpg", 8, 8, 8, 8, tile=False):
             xsize 0.5
             ysize 0.75
-    frame:
+    frame at fading:
         xalign 0.5
         yalign 0.9
         background Solid("#00000073")
         textbutton "A dormitory is a building primarily providing sleeping\nand residential quarters for large numbers of students\nto board school more conviently {b}Evening{b}":
             text_color "#FFFFFF"
+    frame at move_from_right_cost:
+        xalign 0.905
+        yalign 0.15
+        textbutton "Cost: $$$":
+            text_color "#FFFFFF"  
 screen bath_area:
     frame at fading:
         xalign 0.5
@@ -37,6 +47,11 @@ screen bath_area:
         background Solid("#00000073")
         textbutton "Open hot water baths for students to relax also known as Onsen\nBuying this will give your students a boost of\nmorale every {b}Evening{b}":
             text_color "#FFFFFF"
+    frame at move_from_right_cost:
+        xalign 0.905
+        yalign 0.15
+        textbutton "Cost: $$$":
+            text_color "#FFFFFF"  
 screen cafeteria:
     frame at fading:
         xalign 0.5
@@ -50,6 +65,11 @@ screen cafeteria:
         background Solid("#00000073")
         textbutton "This is where you students be buying snacks and socialize\nThis building could help you generate some income {b}Afternoon{b}":
             text_color "#FFFFFF"
+    frame at move_from_right_cost:
+        xalign 0.905
+        yalign 0.15
+        textbutton "Cost: $$$":
+            text_color "#FFFFFF"  
 screen gym:
     frame at fading:
         xalign 0.5
@@ -63,6 +83,11 @@ screen gym:
         background Solid("#00000073")
         textbutton "A building where students can practice indoor athletic trainning\nThis gym could boost athletic stats {b}Morning{b}":
             text_color "#FFFFFF"
+    frame at move_from_right_cost:
+        xalign 0.905
+        yalign 0.15
+        textbutton "Cost: $$$":
+            text_color "#FFFFFF"  
 screen school_grounds:
     frame at fading:
         xalign 0.5
@@ -76,6 +101,11 @@ screen school_grounds:
         background Solid("#00000073")
         textbutton "This building represent the quality and upkeep\nof the school. Upgrading thiswill makes the whole school more\nbeautiful with students and staff happier {b}Evening{b}":
             text_color "#FFFFFF"
+    frame at move_from_right_cost:
+        xalign 0.905
+        yalign 0.15
+        textbutton "Cost: $$$":
+            text_color "#FFFFFF"  
 screen library:
     frame at fading:
         xalign 0.5
@@ -89,6 +119,11 @@ screen library:
         background Solid("#00000073")
         textbutton "A library to store school's collection of books\nand internet access. Giving students access to knowledge help\n boost their academic skills {b}Morning{b}":
             text_color "#FFFFFF"
+    frame at move_from_right_cost:
+        xalign 0.905
+        yalign 0.15
+        textbutton "Cost: $$$":
+            text_color "#FFFFFF"  
 screen pool:
     frame at fading:
         xalign 0.5
@@ -102,6 +137,11 @@ screen pool:
         background Solid("#00000073")
         textbutton "This is a swimming pool which boost athletic skills\nstudents can spend their time enjoy swimming in the pool {b}Afternoon{b}":
             text_color "#FFFFFF"
+    frame at move_from_right_cost:
+        xalign 0.905
+        yalign 0.15
+        textbutton "Cost: $$$":
+            text_color "#FFFFFF"  
 screen sports_field:
     frame at fading:
         xalign 0.5
@@ -115,6 +155,11 @@ screen sports_field:
         background Solid("#00000073")
         textbutton "A large and open field play ground for students to\npractice and exercise to their heart contents {b}Afternoon{b}":
             text_color "#FFFFFF"
+    frame at move_from_right_cost:
+        xalign 0.905
+        yalign 0.15
+        textbutton "Cost: $$$":
+            text_color "#FFFFFF"  
 screen surveillance:
     frame at fading:
         xalign 0.5
@@ -128,6 +173,11 @@ screen surveillance:
         background Solid("#00000073")
         textbutton "Upgrading surveillance will record anysuspicious\nactivity around the school":
             text_color "#FFFFFF"
+    frame at move_from_right_cost:
+        xalign 0.905
+        yalign 0.15
+        textbutton "Cost: $$$":
+            text_color "#FFFFFF"  
 screen security:
     frame at fading:
         xalign 0.5
@@ -141,6 +191,11 @@ screen security:
         background Solid("#00000073")
         textbutton "This upgrades is keep everything under control\nImprove student behavior and prevent any circumstances\nthat ruin the school reputation":
             text_color "#FFFFFF"
+    frame at move_from_right_cost:
+        xalign 0.905
+        yalign 0.15
+        textbutton "Cost: $$$":
+            text_color "#FFFFFF"  
 
 screen placeholder_text:
     default displayText = ""
@@ -148,13 +203,6 @@ screen placeholder_text:
         yalign 0.025
         frame:
             text displayText
-
-screen placeholder_texts:
-    default displayTexts = ""
-    hbox at move_from_left_text0:
-        yalign 0.12
-        textbutton displayTexts:
-            text_color "#000000"
 
 screen placeholder_text0:
     default displayText0 = ""
@@ -226,6 +274,13 @@ screen placeholder_text9:
         textbutton displayText9:
             text_color "#000000"
 
+screen placeholder_text10:
+    default displayText10 = ""
+    hbox at move_from_left_text0:
+        yalign 0.12
+        textbutton displayText10:
+            text_color "#000000"
+
 transform move_from_left_text:
     on show:
         alpha 0.0 xalign -0.1
@@ -244,27 +299,27 @@ transform move_from_left_text0:
 
 transform move_from_top0:
     on show:
-        yalign -0.5
-        linear 0.5 yalign 0.025
+        yalign -0.5 alpha 0.0
+        linear 0.5 yalign 0.025 alpha 1.0
     on hide:
-        yalign 0.025
-        linear 0.5 yalign -0.5
+        yalign 0.025 alpha 1.0
+        linear 0.5 yalign -0.5 alpha 0.0
 
 transform move_from_top1:
     on show:
-        yalign -0.5
-        linear 0.5 yalign 0.25
+        yalign -0.5 alpha 0.0
+        linear 0.5 yalign 0.25 alpha 1.0
     on hide:
-        yalign 0.25
-        linear 0.5 yalign -0.5
+        yalign 0.25 alpha 1.0
+        linear 0.5 yalign -0.5 alpha 0.0
 
 transform move_from_right:
     on show:
-        xalign 1.5
-        linear 0.5 xalign 0.975
+        xalign 1.5 alpha 0.0
+        linear 0.5 xalign 0.975 alpha 1.0
     on hide:
-        xalign 0.975
-        linear 0.5 xalign 1.5
+        xalign 0.975 alpha 1.0
+        linear 0.5 xalign 1.5 alpha 0.0
 
 transform fading:
     on show:
@@ -275,13 +330,19 @@ transform fading:
 
 transform move_from_left:
     on show:
-        xalign -0.5
-        linear 0.5 xalign 0.025
+        xalign -0.5 alpha 0.0
+        linear 0.5 xalign 0.025 alpha 1.0
     on hide:
-        xalign 0.025
-        linear 0.5 xalign -0.5
+        xalign 0.025 alpha 1.0
+        linear 0.5 xalign -0.5 alpha 0.0
 
-
+transform move_from_right_cost:
+    on show:
+        xalign 0.875 alpha 0.0
+        linear 0.25 xalign 0.895 alpha 1.0
+    on hide:
+        xalign 0.895 alpha 1.0
+        linear 0.25 xalign 0.875 alpha 0.0
 
 init python:
     # Functions custom_textbutton #

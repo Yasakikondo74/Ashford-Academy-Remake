@@ -209,36 +209,6 @@ init python:
                 "perfect record": 40
             }
             st.amount_students -= renpy.random.randint(0, entrance_requirements.get(self.entrance_requirement_strength, 0))
-
-            # Student_applied_for_school = renpy.random.randint(25, 50)
-            # st.amount_students += Student_applied_for_school
-
-            # if self.reputation >= 1000.0:
-            #     condition3 = renpy.random.randint(0, 10)
-            #     st.amount_students -= condition3
-            # elif self.reputation >= 100.0:
-            #     condition2 = renpy.random.randint(5, 15)
-            #     st.amount_students -= condition2
-            # elif self.reputation >= 10.0:
-            #     condition1 = renpy.random.randint(10, 20)
-            #     st.amount_students -= condition1
-            # else:
-            #     st.amount_students -= 25
-
-            # if self.entrance_requirement_strength == "none":
-            #     st.amount_students -= 0
-            # elif self.entrance_requirement_strength == "age":
-            #     condition4 = renpy.random.randint(0, 10)
-            #     st.amount_students -= condition4
-            # elif self.entrance_requirement_strength == "standard":
-            #     condition3 = renpy.random.randint(10, 20)
-            #     st.amount_students -= condition3
-            # elif self.entrance_requirement_strength == "advanced":
-            #     condition2 = renpy.random.randint(20, 30)
-            #     st.amount_students -= condition2
-            # elif self.entrance_requirement_strength == "perfect record":
-            #     condition1 = renpy.random.randint(30, 40)
-            #     st.amount_students -= condition1
     
     s = School()
 
