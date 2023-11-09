@@ -344,11 +344,19 @@ transform move_from_right_cost:
         xalign 0.895 alpha 1.0
         linear 0.25 xalign 0.875 alpha 0.0
 
+transform move_from_top2:
+    on show:
+        yalign -0.5 alpha 0.0
+        linear 0.5 yalign 0.0 alpha 1.0
+    on hide:
+        yalign 0.0 alpha 1.0
+        linear 0.5 yalign -0.5 alpha 0.0
+
 init python:
     # Functions custom_textbutton #
     style.custom_textbutton = Style(style.button)
-    style.custom_textbutton.background = Frame("choice_idle_background.png", 150, 8, 150, 8, tile=False)
-    style.custom_textbutton.hover_background = Frame("choice_hover_background.png", 150, 8, 150, 8, tile=False)
+    style.custom_textbutton.background = Frame("choice_idle_background.png", 8, 8, 8, 8, tile=False)
+    style.custom_textbutton.hover_background = Frame("choice_hover_background.png", 8, 8, 8, 8, tile=False)
 
     # Functions custom_textbutton_text #
     style.custom_textbutton_text = Style(style.button_text)

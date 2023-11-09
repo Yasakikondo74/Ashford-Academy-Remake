@@ -1,4 +1,5 @@
 label Your_Office:
+    hide screen Policies
     hide screen Buildings
     scene ashford
     show screen Your_Office
@@ -41,3 +42,12 @@ label Buildings:
 label Events:
     "Events"
     jump Your_Office
+
+label Policies:
+    hide screen Your_Office
+    hide screen Student_stat
+    hide screen Datetime
+    hide screen Functions
+    show screen Policies
+    pause
+    jump Policies

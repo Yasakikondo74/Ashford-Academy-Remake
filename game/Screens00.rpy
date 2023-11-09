@@ -255,7 +255,7 @@ screen Functions:
         vbox:
             spacing 10
             xalign 0.5
-            textbutton "Policies" action Jump("Test0") style "custom_textbutton":
+            textbutton "Policies" action Jump("Policies") style "custom_textbutton":
                 xalign 0.5
                 xsize 1.0
                 text_style "custom_textbutton_text"
@@ -291,7 +291,7 @@ screen Buildings:
         xalign 0.935
         yalign 0.05
         textbutton "Buy/Upgrades":
-            action Jump("Buildings")
+            action NullAction()
             text_style "custom_textbutton_text0"
             style "custom_textbutton0"
     vbox at move_from_left:
@@ -300,6 +300,7 @@ screen Buildings:
             xsize 0.15
             ysize 0.1
             textbutton "Buildings":
+                action NullAction()
                 text_color "#FFFFFF"
                 xalign 0.5
                 yalign 0.5
@@ -432,5 +433,72 @@ screen Buildings:
                 Hide("classroom"), Hide("bath_area"), Hide("dormitory"), Hide("gym"),
                 Hide("pool"), Hide("school_grounds"), Hide("security"), Hide("surveillance"),
                 Hide("cafeteria"), Hide("library"), Hide("sports_field"), Jump("Your_Office")]
+                text_style "custom_textbutton_text0"
+                style "custom_textbutton0"         
+
+screen Policies:
+    vbox at move_from_top2:
+        spacing 5
+        frame:
+            xsize 0.2
+            ysize 0.1
+            xalign 0.5
+            textbutton "Current Policies":
+                action NullAction()
+                text_color "#FFFFFF"
+                xalign 0.5
+                yalign 0.5
+        frame:
+            xalign 0.5
+            textbutton "School Dresscode":
+                action NullAction()
+                text_style "custom_textbutton_text0"
+                style "custom_textbutton0"
+        frame:
+            xalign 0.5
+            textbutton "Teacher Leeway":
+                action NullAction()
+                text_style "custom_textbutton_text0"
+                style "custom_textbutton0"
+        frame:
+            xalign 0.5
+            textbutton "Depiction of the human body":
+                action NullAction()
+                text_style "custom_textbutton_text0"
+                style "custom_textbutton0"
+        frame:
+            xalign 0.5
+            textbutton "Entrance requirement strenght":
+                action NullAction()
+                text_style "custom_textbutton_text0"
+                style "custom_textbutton0"
+        frame:
+            xalign 0.5
+            textbutton "Entrance requirement focus":
+                action NullAction()
+                text_style "custom_textbutton_text0"
+                style "custom_textbutton0"
+        frame:
+            xalign 0.5
+            textbutton "Learning materials":
+                action NullAction()
+                text_style "custom_textbutton_text0"
+                style "custom_textbutton0"
+        frame:
+            xalign 0.5
+            textbutton "Staff salary":
+                action NullAction()
+                text_style "custom_textbutton_text0"
+                style "custom_textbutton0"
+        frame:
+            xalign 0.5
+            textbutton "Class size":
+                action NullAction()
+                text_style "custom_textbutton_text0"
+                style "custom_textbutton0"
+        frame:
+            xalign 0.5
+            textbutton "Back":
+                action Jump("Your_Office")
                 text_style "custom_textbutton_text0"
                 style "custom_textbutton0"         

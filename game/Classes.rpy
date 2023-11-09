@@ -78,13 +78,14 @@ init python:
         def __init__(self):
             # SCHOOL SETTINGS #
             self.name = "Ashford"
-            self.dresscode = "conservative"
-            self.teacher_leeway = "verbal abuse"
-            self.entrance_requirement_strength = "standard"
-            self.entrance_requirement_focus = "obedient"
-            self.learning_materials = "old_n_cheap"
-            self.teacher_salery = "average"
-            self.class_size = "big"
+            self.dresscode = "Conservative"
+            self.teacher_leeway = "Verbal abuse"
+            self.depiction_of_the_human_body = "Non sexual"
+            self.entrance_requirement_strength = "Standard"
+            self.entrance_requirement_focus = "Obedient"
+            self.learning_materials = "Old & Cheap"
+            self.salary = "Average"
+            self.class_size = "Big"
 
             # SCHOOL UPGRADES #
             self.surveillance_option = False
@@ -101,7 +102,7 @@ init python:
             self.bath = 0
             self.club = False
             self.sex_education = False
-            self.upgrade_building_image = "classroom"
+            self.upgrade_building_image = "None"
 
             # SCHOOL STATS #
             self.hygiene = "clean"
