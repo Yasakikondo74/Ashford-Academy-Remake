@@ -2,7 +2,7 @@ screen classroom:
     frame at fading: 
         xalign 0.5
         yalign 0.05
-        add Frame("building_classrooms.jpg", 8, 8, 8, 8, tile=False):
+        add Frame("building/building_classrooms.jpg", 8, 8, 8, 8, tile=False):
             xsize 0.5
             ysize 0.75
     frame at fading:
@@ -20,7 +20,7 @@ screen dormitory:
     frame at fading:
         xalign 0.5
         yalign 0.05
-        add Frame("building_dormitory.jpg", 8, 8, 8, 8, tile=False):
+        add Frame("building/building_dormitory.jpg", 8, 8, 8, 8, tile=False):
             xsize 0.5
             ysize 0.75
     frame at fading:
@@ -38,7 +38,7 @@ screen bath_area:
     frame at fading:
         xalign 0.5
         yalign 0.05
-        add Frame("building_bath.jpg", 8, 8, 8, 8, tile=False):
+        add Frame("building/building_bath.jpg", 8, 8, 8, 8, tile=False):
             xsize 0.5
             ysize 0.75
     frame at fading:
@@ -56,7 +56,7 @@ screen cafeteria:
     frame at fading:
         xalign 0.5
         yalign 0.05
-        add Frame("building_cafeteria.jpg", 8, 8, 8, 8, tile=False):
+        add Frame("building/building_cafeteria.jpg", 8, 8, 8, 8, tile=False):
             xsize 0.5
             ysize 0.75
     frame at fading:
@@ -74,7 +74,7 @@ screen gym:
     frame at fading:
         xalign 0.5
         yalign 0.05
-        add Frame("building_gym.jpg", 8, 8, 8, 8, tile=False):
+        add Frame("building/building_gym.jpg", 8, 8, 8, 8, tile=False):
             xsize 0.5
             ysize 0.75
     frame at fading:
@@ -92,7 +92,7 @@ screen school_grounds:
     frame at fading:
         xalign 0.5
         yalign 0.05
-        add Frame("building_grounds.jpg", 8, 8, 8, 8, tile=False):
+        add Frame("building/building_grounds.jpg", 8, 8, 8, 8, tile=False):
             xsize 0.5
             ysize 0.75
     frame at fading:
@@ -110,7 +110,7 @@ screen library:
     frame at fading:
         xalign 0.5
         yalign 0.05
-        add Frame("building_library.jpg", 8, 8, 8, 8, tile=False):
+        add Frame("building/building_library.jpg", 8, 8, 8, 8, tile=False):
             xsize 0.5
             ysize 0.75
     frame at fading:
@@ -128,7 +128,7 @@ screen pool:
     frame at fading:
         xalign 0.5
         yalign 0.05
-        add Frame("building_pool.jpg", 8, 8, 8, 8, tile=False):
+        add Frame("building/building_pool.jpg", 8, 8, 8, 8, tile=False):
             xsize 0.5
             ysize 0.75
     frame at fading:
@@ -146,7 +146,7 @@ screen sports_field:
     frame at fading:
         xalign 0.5
         yalign 0.05
-        add Frame("building_sports_field.jpg", 8, 8, 8, 8, tile=False):
+        add Frame("building/building_sports_field.jpg", 8, 8, 8, 8, tile=False):
             xsize 0.5
             ysize 0.75
     frame at fading:
@@ -164,7 +164,7 @@ screen surveillance:
     frame at fading:
         xalign 0.5
         yalign 0.05
-        add Frame("building_surveillance.jpg", 8, 8, 8, 8, tile=False):
+        add Frame("building/building_surveillance.jpg", 8, 8, 8, 8, tile=False):
             xsize 0.5
             ysize 0.75
     frame at fading:
@@ -182,7 +182,7 @@ screen security:
     frame at fading:
         xalign 0.5
         yalign 0.05
-        add Frame("building_security.jpg", 8, 8, 8, 8, tile=False):
+        add Frame("building/building_security.jpg", 8, 8, 8, 8, tile=False):
             xsize 0.5
             ysize 0.75
     frame at fading:
@@ -207,77 +207,77 @@ screen placeholder_text:
 screen placeholder_text0:
     default displayText0 = ""
     hbox at move_from_left_text0:
-        yalign 0.19
+        yalign 0.12
         textbutton displayText0:
             text_color "#000000"
 
 screen placeholder_text1:
     default displayText1 = ""
     hbox at move_from_left_text0:
-        yalign 0.2625
+        yalign 0.19
         textbutton displayText1:
             text_color "#000000"
 
 screen placeholder_text2:
-    default displayText1 = ""
+    default displayText2 = ""
     hbox at move_from_left_text0:
-        yalign 0.33
+        yalign 0.2625
         textbutton displayText2:
             text_color "#000000"
 
 screen placeholder_text3:
-    default displayText1 = ""
+    default displayText3 = ""
     hbox at move_from_left_text0:
-        yalign 0.405
+        yalign 0.33
         textbutton displayText3:
             text_color "#000000"
 
 screen placeholder_text4:
-    default displayText1 = ""
+    default displayText4 = ""
     hbox at move_from_left_text0:
-        yalign 0.475
+        yalign 0.405
         textbutton displayText4:
             text_color "#000000"
 
 screen placeholder_text5:
-    default displayText1 = ""
+    default displayText5 = ""
     hbox at move_from_left_text0:
-        yalign 0.55
+        yalign 0.475
         textbutton displayText5:
             text_color "#000000"
 
 screen placeholder_text6:
-    default displayText1 = ""
+    default displayText6 = ""
     hbox at move_from_left_text0:
-        yalign 0.62
+        yalign 0.55
         textbutton displayText6:
             text_color "#000000"
 
 screen placeholder_text7:
-    default displayText1 = ""
+    default displayText7 = ""
     hbox at move_from_left_text0:
-        yalign 0.69
+        yalign 0.62
         textbutton displayText7:
             text_color "#000000"
 
 screen placeholder_text8:
-    default displayText1 = ""
+    default displayText8 = ""
     hbox at move_from_left_text0:
-        yalign 0.76
+        yalign 0.69
         textbutton displayText8:
             text_color "#000000"
 
 screen placeholder_text9:
-    default displayText1 = ""
+    default displayText9 = ""
     hbox at move_from_left_text0:
-        yalign 0.83
+        yalign 0.76
         textbutton displayText9:
             text_color "#000000"
 
 screen placeholder_text10:
     default displayText10 = ""
     hbox at move_from_left_text0:
-        yalign 0.12
+        yalign 0.83
         textbutton displayText10:
             text_color "#000000"
 

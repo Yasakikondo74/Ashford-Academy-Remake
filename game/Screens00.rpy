@@ -417,7 +417,7 @@ screen Buildings:
         if s.surveillance_option == True:
             frame:
                 xalign 1.0
-                textbutton "surveillance":
+                textbutton "Surveillance":
                     action [SetField(persistent, s.upgrade_building_image, "surveillance"),
                     Hide("classroom"), Hide("bath_area"), Hide("dormitory"), Hide("gym"),
                     Hide("pool"), Hide("school_grounds"), Hide("security"),
@@ -429,7 +429,7 @@ screen Buildings:
         frame:
             xalign 1.0
             textbutton "Back":
-                action [SetField(persistent, s.upgrade_building_image, "None"),
+                action [SetField(persistent, s.upgrade_building_image, None),
                 Hide("classroom"), Hide("bath_area"), Hide("dormitory"), Hide("gym"),
                 Hide("pool"), Hide("school_grounds"), Hide("security"), Hide("surveillance"),
                 Hide("cafeteria"), Hide("library"), Hide("sports_field"), Jump("Your_Office")]
