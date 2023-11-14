@@ -70,7 +70,7 @@ init python:
             self.dresscode = "Conservative"
             self.teacher_leeway = "Verbal abuse"
             self.depiction_of_the_human_body = "Non sexual"
-            self.entrance_requirement_strength = "Standard"
+            self.entrance_requirement_strenght = "Standard"
             self.entrance_requirement_focus = "Obedient"
             self.learning_materials = "Old & Cheap"
             self.salary = "Average"
@@ -91,7 +91,8 @@ init python:
             self.bath = 0
             self.club = False
             self.sex_education = False
-            self.upgrade_building_image = None
+            self.upgrade_building_image = "None"
+            self.upgrade_policies_image = "None"
 
             # SCHOOL STATS #
             self.hygiene = "clean"

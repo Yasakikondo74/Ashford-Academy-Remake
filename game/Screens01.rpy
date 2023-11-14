@@ -15,7 +15,8 @@ screen classroom:
         xalign 0.905
         yalign 0.15
         textbutton "Cost: $$$":
-            text_color "#FFFFFF"    
+            text_color "#FFFFFF"  
+
 screen dormitory:
     frame at fading:
         xalign 0.5
@@ -34,6 +35,7 @@ screen dormitory:
         yalign 0.15
         textbutton "Cost: $$$":
             text_color "#FFFFFF"  
+
 screen bath_area:
     frame at fading:
         xalign 0.5
@@ -52,6 +54,7 @@ screen bath_area:
         yalign 0.15
         textbutton "Cost: $$$":
             text_color "#FFFFFF"  
+
 screen cafeteria:
     frame at fading:
         xalign 0.5
@@ -69,7 +72,8 @@ screen cafeteria:
         xalign 0.905
         yalign 0.15
         textbutton "Cost: $$$":
-            text_color "#FFFFFF"  
+            text_color "#FFFFFF" 
+
 screen gym:
     frame at fading:
         xalign 0.5
@@ -88,6 +92,7 @@ screen gym:
         yalign 0.15
         textbutton "Cost: $$$":
             text_color "#FFFFFF"  
+
 screen school_grounds:
     frame at fading:
         xalign 0.5
@@ -105,7 +110,8 @@ screen school_grounds:
         xalign 0.905
         yalign 0.15
         textbutton "Cost: $$$":
-            text_color "#FFFFFF"  
+            text_color "#FFFFFF"
+
 screen library:
     frame at fading:
         xalign 0.5
@@ -124,6 +130,7 @@ screen library:
         yalign 0.15
         textbutton "Cost: $$$":
             text_color "#FFFFFF"  
+
 screen pool:
     frame at fading:
         xalign 0.5
@@ -142,6 +149,7 @@ screen pool:
         yalign 0.15
         textbutton "Cost: $$$":
             text_color "#FFFFFF"  
+
 screen sports_field:
     frame at fading:
         xalign 0.5
@@ -160,6 +168,7 @@ screen sports_field:
         yalign 0.15
         textbutton "Cost: $$$":
             text_color "#FFFFFF"  
+
 screen surveillance:
     frame at fading:
         xalign 0.5
@@ -178,6 +187,7 @@ screen surveillance:
         yalign 0.15
         textbutton "Cost: $$$":
             text_color "#FFFFFF"  
+
 screen security:
     frame at fading:
         xalign 0.5
@@ -196,6 +206,70 @@ screen security:
         yalign 0.15
         textbutton "Cost: $$$":
             text_color "#FFFFFF"  
+
+screen school_dresscode:
+    frame at fading:
+        xalign 0.995
+        yalign 0.05
+        add Frame("policies/dresscode_cons.jpg", 8, 8, 8, 8, tile=False):
+            xsize 0.5
+            ysize 0.75
+
+screen teacher_leeway:
+    frame at fading:
+        xalign 0.995
+        yalign 0.05
+        add Frame("policies/teacher_leeway_verbal.jpg", 8, 8, 8, 8, tile=False):
+            xsize 0.5
+            ysize 0.75
+
+screen depiction_of_the_human_body:
+    frame at fading:
+        xalign 0.995
+        yalign 0.05
+        add Frame("policies/human_anatomy_depiction_nonsexual.jpg", 8, 8, 8, 8, tile=False):
+            xsize 0.5
+            ysize 0.75
+
+screen entrance_requirement_strenght:
+    frame at fading:
+        xalign 0.995
+        yalign 0.05
+        add Frame("policies/entrance_req_strength_none.jpg", 8, 8, 8, 8, tile=False):
+            xsize 0.5
+            ysize 0.75
+
+screen entrance_requirement_focus:
+    frame at fading:
+        xalign 0.995
+        yalign 0.05
+        add Frame("policies/entrance_req_focus_attitude.jpg", 8, 8, 8, 8, tile=False):
+            xsize 0.5
+            ysize 0.75
+
+screen learning_materials:
+    frame at fading:
+        xalign 0.995
+        yalign 0.05
+        add Frame("policies/teaching_materials_old.jpg", 8, 8, 8, 8, tile=False):
+            xsize 0.5
+            ysize 0.75
+
+screen staff_salary:
+    frame at fading:
+        xalign 0.995
+        yalign 0.05
+        add Frame("policies/staff_salary_low.jpg", 8, 8, 8, 8, tile=False):
+            xsize 0.5
+            ysize 0.75
+
+screen class_size:
+    frame at fading:
+        xalign 0.995
+        yalign 0.05
+        add Frame("policies/class_size_big.jpg", 8, 8, 8, 8, tile=False):
+            xsize 0.5
+            ysize 0.75
 
 screen placeholder_text:
     default displayText = ""
