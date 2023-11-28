@@ -307,7 +307,7 @@ screen Buildings:
         frame:
             xalign 1.0
             textbutton "Bath Area":
-                action [SetField(persistent, s.upgrade_building_image, "bath_area"),
+                action [SetLocalVariable(upgrade_building_image, "bath_area"),
                 Hide("classroom"), Hide("dormitory"), Hide("gym"), Hide("library"), Hide("cafeteria"),
                 Hide("pool"), Hide("school_grounds"), Hide("security"), Hide("surveillance"),
                 Hide("sports_field"), Show("bath_area")]
@@ -318,7 +318,7 @@ screen Buildings:
         frame:
             xalign 1.0
             textbutton "Cafeteria":
-                action [SetField(persistent, s.upgrade_building_image, "cafeteria"), Hide("classroom"),
+                action [SetLocalVariable(upgrade_building_image, "cafeteria"), Hide("classroom"),
                 Hide("building_classrooms"), Hide("bath_area"), Hide("gym"), Hide("library"),
                 Hide("pool"), Hide("school_grounds"), Hide("security"), Hide("surveillance"),
                 Hide("dormitory"), Hide("sports_field"), Show("cafeteria")]
@@ -329,7 +329,7 @@ screen Buildings:
         frame:
             xalign 1.0
             textbutton "Classroom":
-                action [SetField(persistent, s.upgrade_building_image, "classroom"), 
+                action [SetLocalVariable(upgrade_building_image, "classroom"), 
                 Hide("building_classrooms"), Hide("bath_area"), Hide("gym"), Hide("library"),
                 Hide("pool"), Hide("school_grounds"), Hide("security"), Hide("surveillance"),
                 Hide("dormitory"), Hide("cafeteria"), Hide("sports_field"), Show("classroom")]
@@ -340,7 +340,7 @@ screen Buildings:
         frame:
             xalign 1.0
             textbutton "Dormitory":
-                action [SetField(persistent, s.upgrade_building_image, "dormitory"), 
+                action [SetLocalVariable(upgrade_building_image, "dormitory"), 
                 Hide("classroom"), Hide("bath_area"), Hide("gym"), Hide("library"),
                 Hide("pool"), Hide("school_grounds"), Hide("security"), Hide("surveillance"),
                 Hide("cafeteria"), Hide("sports_field"), Show("dormitory")]
@@ -351,7 +351,7 @@ screen Buildings:
         frame:
             xalign 1.0
             textbutton "Gym":
-                action [SetField(persistent, s.upgrade_building_image, "gym"),
+                action [SetLocalVariable(upgrade_building_image, "gym"),
                 Hide("classroom"), Hide("bath_area"), Hide("dormitory"), Hide("library"),
                 Hide("pool"), Hide("school_grounds"), Hide("security"), Hide("surveillance"),
                 Hide("cafeteria"), Hide("sports_field"), Show("gym")]
@@ -362,7 +362,7 @@ screen Buildings:
         frame:
             xalign 1.0
             textbutton "Library":
-                action [SetField(persistent, s.upgrade_building_image, "library"),
+                action [SetLocalVariable(upgrade_building_image, "library"),
                 Hide("classroom"), Hide("bath_area"), Hide("dormitory"), Hide("gym"),
                 Hide("pool"), Hide("school_grounds"), Hide("security"),
                 Hide("cafeteria"), Hide("sports_field"), Show("library")]
@@ -373,7 +373,7 @@ screen Buildings:
         frame:
             xalign 1.0
             textbutton "Pool":
-                action [SetField(persistent, s.upgrade_building_image, "pool"),
+                action [SetLocalVariable(upgrade_building_image, "pool"),
                 Hide("classroom"), Hide("bath_area"), Hide("dormitory"), Hide("gym"),
                 Hide("library"), Hide("school_grounds"), Hide("security"), Hide("surveillance"),
                 Hide("cafeteria"), Hide("sports_field"), Show("pool")]
@@ -384,7 +384,7 @@ screen Buildings:
         frame:
             xalign 1.0
             textbutton "School Grounds":
-                action [SetField(persistent, s.upgrade_building_image, "school_grounds"),
+                action [SetLocalVariable(upgrade_building_image, "school_grounds"),
                 Hide("classroom"), Hide("bath_area"), Hide("dormitory"), Hide("gym"),
                 Hide("pool"), Hide("library"), Hide("security"), Hide("surveillance"),
                 Hide("cafeteria"), Hide("sports_field"), Show("school_grounds")]
@@ -395,7 +395,7 @@ screen Buildings:
         frame:
             xalign 1.0
             textbutton "Security":
-                action [SetField(persistent, s.upgrade_building_image, "security"),
+                action [SetLocalVariable(upgrade_building_image, "security"),
                 Hide("classroom"), Hide("bath_area"), Hide("dormitory"), Hide("gym"),
                 Hide("pool"), Hide("school_grounds"), Hide("library"), Hide("surveillance"),
                 Hide("cafeteria"), Hide("sports_field"), Show("security")]
@@ -406,7 +406,7 @@ screen Buildings:
         frame:
             xalign 1.0
             textbutton "Sports Fields":
-                action [SetField(persistent, s.upgrade_building_image, "sports_field"),
+                action [SetLocalVariable(upgrade_building_image, "sports_field"),
                 Hide("classroom"), Hide("bath_area"), Hide("dormitory"), Hide("gym"),
                 Hide("pool"), Hide("school_grounds"), Hide("security"), Hide("surveillance"),
                 Hide("cafeteria"), Hide("library"), Show("sports_field")]
@@ -418,7 +418,7 @@ screen Buildings:
             frame:
                 xalign 1.0
                 textbutton "Surveillance":
-                    action [SetField(persistent, s.upgrade_building_image, "surveillance"),
+                    action [SetLocalVariable(upgrade_building_image, "surveillance"),
                     Hide("classroom"), Hide("bath_area"), Hide("dormitory"), Hide("gym"),
                     Hide("pool"), Hide("school_grounds"), Hide("security"),
                     Hide("cafeteria"), Hide("library"), Show("surveillance")]
@@ -429,7 +429,7 @@ screen Buildings:
         frame:
             xalign 1.0
             textbutton "Back":
-                action [SetField(persistent, s.upgrade_building_image, "None"),
+                action [SetLocalVariable(upgrade_building_image, "None"),
                 Hide("classroom"), Hide("bath_area"), Hide("dormitory"), Hide("gym"),
                 Hide("pool"), Hide("school_grounds"), Hide("security"), Hide("surveillance"),
                 Hide("cafeteria"), Hide("library"), Hide("sports_field"), Jump("Your_Office")]
@@ -443,88 +443,79 @@ screen Policies:
             xsize 0.2
             ysize 0.1
             xalign 0.5
-            textbutton "Current Policies":
+            textbutton "School Policies":
                 action NullAction()
                 text_color "#FFFFFF"
                 xalign 0.5
                 yalign 0.5
         frame:
-            xalign 0.5
-            textbutton "School Dresscode":
-                action [SetField(persistent, s.upgrade_policies_image, "school_dresscode"),
-                Hide("teacher_leeway"), Hide("depiction_of_the_human_body"), Hide("entrance_requirement_strenght"), 
-                Hide("entrance_requirement_focus"), Hide("learning_materials"),
-                Hide("staff_salary"), Hide("class_size"), Show("school_dresscode")]
+            xalign 1.0
+            textbutton "Dresscode":
+                action Jump("Policies_Options_dresscode_check")
+                hovered Show("school_dresscode")
+                unhovered Hide("school_dresscode")
                 text_style "custom_textbutton_text0"
                 style "custom_textbutton0"
         frame:
-            xalign 0.5
+            xalign 1.0
             textbutton "Teacher Leeway":
-                action [SetField(persistent, s.upgrade_policies_image, "teacher_leeway"),
-                Hide("school_dresscode"), Hide("depiction_of_the_human_body"), Hide("entrance_requirement_strenght"), 
-                Hide("entrance_requirement_focus"), Hide("learning_materials"),
-                Hide("staff_salary"), Hide("class_size"), Show("teacher_leeway")]
+                action Jump("Policies_Options_teacher_leeway_check")
+                hovered Show("teacher_leeway")
+                unhovered Hide("teacher_leeway")
                 text_style "custom_textbutton_text0"
                 style "custom_textbutton0"
         frame:
-            xalign 0.5
+            xalign 1.0
             textbutton "Depiction of the human body":
-                action [SetField(persistent, s.upgrade_policies_image, "depiction_of_the_human_body"),
-                Hide("school_dresscode"), Hide("teacher_leeway"), Hide("entrance_requirement_strenght"), 
-                Hide("entrance_requirement_focus"), Hide("learning_materials"),
-                Hide("staff_salary"), Hide("class_size"), Show("depiction_of_the_human_body")]
+                action Show("depiction_of_the_human_body_check")
+                hovered Show("depiction_of_the_human_body")
+                unhovered Hide("depiction_of_the_human_body")
                 text_style "custom_textbutton_text0"
                 style "custom_textbutton0"
         frame:
-            xalign 0.5
+            xalign 1.0
             textbutton "Entrance requirement strenght":
-                action [SetField(persistent, s.upgrade_policies_image, "entrance_requirement_strenght"),
-                Hide("school_dresscode"), Hide("teacher_leeway"), Hide("depiction_of_the_human_body"), 
-                Hide("entrance_requirement_focus"), Hide("learning_materials"),
-                Hide("staff_salary"), Hide("class_size"), Show("entrance_requirement_strenght")]
+                action Show("entrance_requirement_strenght_check")
+                hovered Show("entrance_requirement_strenght")
+                unhovered Hide("entrance_requirement_strenght")
                 text_style "custom_textbutton_text0"
                 style "custom_textbutton0"
         frame:
-            xalign 0.5
+            xalign 1.0
             textbutton "Entrance requirement focus":
-                action [SetField(persistent, s.upgrade_policies_image, "entrance_requirement_focus"),
-                Hide("school_dresscode"), Hide("teacher_leeway"), Hide("depiction_of_the_human_body"), 
-                Hide("entrance_requirement_strenght"), Hide("learning_materials"),
-                Hide("staff_salary"), Hide("class_size"), Show("entrance_requirement_focus")]
+                action Show("entrance_requirement_focus")
+                hovered Show("entrance_requirement_focus")
+                unhovered Hide("entrance_requirement_focus")
                 text_style "custom_textbutton_text0"
                 style "custom_textbutton0"
         frame:
-            xalign 0.5
+            xalign 1.0
             textbutton "Learning materials":
-                action [SetField(persistent, s.upgrade_policies_image, "learning_materials"),
-                Hide("school_dresscode"), Hide("teacher_leeway"), Hide("depiction_of_the_human_body"), 
-                Hide("entrance_requirement_strenght"), Hide("entrance_requirement_focus"),
-                Hide("staff_salary"), Hide("class_size"), Show("learning_materials")]
+                action Show("learning_materials_check")
+                hovered Show("learning_materials")
+                unhovered Hide("learning_materials")
                 text_style "custom_textbutton_text0"
                 style "custom_textbutton0"
         frame:
-            xalign 0.5
+            xalign 1.0
             textbutton "Staff salary":
-                action [SetField(persistent, s.upgrade_policies_image, "staff_salary"),
-                Hide("school_dresscode"), Hide("teacher_leeway"), Hide("depiction_of_the_human_body"), 
-                Hide("entrance_requirement_strenght"), Hide("entrance_requirement_focus"),
-                Hide("learning_materials"), Hide("class_size"), Show("staff_salary")]
+                action Show("staff_salary_check")
+                hovered Show("staff_salary")
+                unhovered Hide("staff_salary")
                 text_style "custom_textbutton_text0"
                 style "custom_textbutton0"
         frame:
-            xalign 0.5
+            xalign 1.0
             textbutton "Class size":
-                action [SetField(persistent, s.upgrade_policies_image, "class_size"),
-                Hide("school_dresscode"), Hide("teacher_leeway"), Hide("depiction_of_the_human_body"), 
-                Hide("entrance_requirement_strenght"), Hide("entrance_requirement_focus"),
-                Hide("learning_materials"), Hide("staff_salary"), Show("class_size")]
+                action Show("class_size_checl")
+                hovered Show("class_size")
+                unhovered Hide("class_size")
                 text_style "custom_textbutton_text0"
                 style "custom_textbutton0"
         frame:
-            xalign 0.5
+            xalign 1.0
             textbutton "Back":
-                action [SetField(persistent, s.upgrade_policies_image, "None"),
-                Hide("school_dresscode"), Hide("teacher_leeway"), Hide("depiction_of_the_human_body"), 
+                action [Hide("school_dresscode"), Hide("teacher_leeway"), Hide("depiction_of_the_human_body"), 
                 Hide("entrance_requirement_strenght"), Hide("entrance_requirement_focus"),
                 Hide("learning_materials"), Hide("staff_salary"), Hide("class_size"),Jump("Your_Office")]
                 text_style "custom_textbutton_text0"

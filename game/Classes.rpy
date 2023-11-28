@@ -2,6 +2,8 @@ define unknown = Character("???")
 define C = Character("Creator")
 image ashford = Transform("images/ashford.jpg", size = (1920, 1080))
 image dp_frame = "gui/dp_frame.png"
+define upgrade_building_image = ""
+define upgrade_policies_image = ""
 
 init python:
     class MC:
@@ -68,10 +70,10 @@ init python:
             # SCHOOL SETTINGS #
             self.name = "Ashford"
             self.dresscode = "Conservative"
-            self.teacher_leeway = "Verbal abuse"
-            self.depiction_of_the_human_body = "Non sexual"
-            self.entrance_requirement_strenght = "Standard"
-            self.entrance_requirement_focus = "Obedient"
+            self.teacher_leeway = "Verbal Abuse"
+            self.depiction_of_the_human_body = "Non-sexual"
+            self.entrance_requirement_strenght = "None"
+            self.entrance_requirement_focus = "Attitude"
             self.learning_materials = "Old & Cheap"
             self.salary = "Average"
             self.class_size = "Big"
@@ -91,8 +93,6 @@ init python:
             self.bath = 0
             self.club = False
             self.sex_education = False
-            self.upgrade_building_image = "None"
-            self.upgrade_policies_image = "None"
 
             # SCHOOL STATS #
             self.hygiene = "clean"
@@ -109,6 +109,102 @@ init python:
             self.year = 1
             self.day_name = "1st"
             self.year_name = "{:04d}".format(self.year)
+        
+        def change_dresscode(self):
+            if self.dresscode == "Conservative":
+                self.dresscode = "Normal"
+            elif self.dresscode == "Normal":
+                self.dresscode = "None"
+            elif self.dresscode == "None":
+                self.dresscode = "Sexy"
+            elif self.dresscode == "Sexy":
+                self.dresscode = "Nude"
+            else:
+                self.dresscode = "Conservative"
+
+        def change_teacher_leeway(self):
+            if self.teacher_leeway == "None":
+                self.teacher_leeway = "Verbal Abuse"
+            elif self.teacher_leeway == "Verbal Abuse":
+                self.teacher_leeway = "Physical Abuse"
+            elif self.teacher_leeway == "Physical Abuse":
+                self.teacher_leeway = "Spanking"
+            elif self.teacher_leeway == "Spanking":
+                self.teacher_leeway = "BDSM"
+            else:
+                self.teacher_leeway = "None"
+        
+        def change_depiction_of_the_human_body(self):
+            if self.depiction_of_the_human_body == "Non-sexual":
+                self.depiction_of_the_human_body = ""
+            elif self.depiction_of_the_human_body == "":
+                self.depiction_of_the_human_body = ""
+            elif self.depiction_of_the_human_body == "":
+                self.depiction_of_the_human_body = ""
+            elif self.depiction_of_the_human_body == "":
+                self.depiction_of_the_human_body = ""
+            else:
+                self.depiction_of_the_human_body = "Non-sexual"
+
+        def change_entrance_requirement_strenght(self):
+            if self.entrance_requirement_strenght == "None":
+                self.entrance_requirement_strenght = ""
+            elif self.entrance_requirement_strenght == "":
+                self.entrance_requirement_strenght = ""
+            elif self.entrance_requirement_strenght == "":
+                self.entrance_requirement_strenght = ""
+            elif self.entrance_requirement_strenght == "":
+                self.entrance_requirement_strenght = ""
+            else:
+                self.entrance_requirement_strenght = "None"
+
+        def change_entrance_requirement_focus(self):
+            if self.entrance_requirement_focus == "Attitude":
+                self.entrance_requirement_focus = ""
+            elif self.entrance_requirement_focus == "":
+                self.entrance_requirement_focus = ""
+            elif self.entrance_requirement_focus == "":
+                self.entrance_requirement_focus = ""
+            elif self.entrance_requirement_focus == "":
+                self.entrance_requirement_focus = ""
+            else:
+                self.entrance_requirement_focus = "Attitude"
+
+        def change_learning_materials(self):
+            if self.learning_materials == "Old & Cheap":
+                self.learning_materials = ""
+            elif self.learning_materials == "":
+                self.learning_materials = ""
+            elif self.learning_materials == "":
+                self.learning_materials = ""
+            elif self.learning_materials == "":
+                self.learning_materials = ""
+            else:
+                self.learning_materials = "Old & Cheap"
+
+        def change_staff_salary(self):
+            if self.salary == "Average":
+                self.salary = ""
+            elif self.salary == "":
+                self.salary = ""
+            elif self.salary == "":
+                self.salary = ""
+            elif self.salary == "":
+                self.salary = ""
+            else:
+                self.salary = "Average"
+
+        def change_class_size(self):
+            if self.class_size == "Big":
+                self.class_size = ""
+            elif self.class_size == "":
+                self.class_size = ""
+            elif self.class_size == "":
+                self.class_size = ""
+            elif self.class_size == "":
+                self.class_size = ""
+            else:
+                self.class_size = "Big"
 
         def next_day(self):
             self.day += 1

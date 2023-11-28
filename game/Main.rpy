@@ -51,3 +51,35 @@ label Policies:
     show screen Policies
     pause
     jump Policies
+
+label Policies_Options_teacher_leeway_check:
+    $ s.change_teacher_leeway()
+    jump Policies
+
+label Policies_Options_dresscode_check:
+    $ s.change_dresscode()
+    jump Policies
+
+label depiction_of_the_human_body_check:
+    $ s.change_depiction_of_the_human_body()
+    jump Policies
+
+label entrance_requirement_strenght_check:
+    $ s.change_entrance_requirement_strenght()
+    jump Policies
+
+label entrance_requirement_focus_check:
+    $ s.change_entrance_requirement_focus()
+    jump Policies
+
+label learning_materials_check:
+    $ s.change_learning_materials()
+    jump Policies
+
+label staff_salary_check:
+    $ s.change_staff_salary()
+    jump Policies
+
+label class_size_check:
+    $ s.change_class_size()
+    jump Policies
