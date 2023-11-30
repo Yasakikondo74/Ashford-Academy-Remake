@@ -71,11 +71,11 @@ init python:
             self.name = "Ashford"
             self.dresscode = "Conservative"
             self.teacher_leeway = "Verbal Abuse"
-            self.depiction_of_the_human_body = "Non-sexual"
+            self.depiction_of_the_human_body = "None"
             self.entrance_requirement_strenght = "None"
             self.entrance_requirement_focus = "Attitude"
             self.learning_materials = "Old & Cheap"
-            self.salary = "Average"
+            self.staff_salary = "Average"
             self.class_size = "Big"
 
             # SCHOOL UPGRADES #
@@ -135,40 +135,40 @@ init python:
                 self.teacher_leeway = "None"
         
         def change_depiction_of_the_human_body(self):
-            if self.depiction_of_the_human_body == "Non-sexual":
-                self.depiction_of_the_human_body = ""
-            elif self.depiction_of_the_human_body == "":
-                self.depiction_of_the_human_body = ""
-            elif self.depiction_of_the_human_body == "":
-                self.depiction_of_the_human_body = ""
-            elif self.depiction_of_the_human_body == "":
-                self.depiction_of_the_human_body = ""
+            if self.depiction_of_the_human_body == "None":
+                self.depiction_of_the_human_body = "Correct"
+            elif self.depiction_of_the_human_body == "Correct":
+                self.depiction_of_the_human_body = "Hyper Sexualized"
+            elif self.depiction_of_the_human_body == "Hyper Sexualized":
+                self.depiction_of_the_human_body = "Live Models"
             else:
-                self.depiction_of_the_human_body = "Non-sexual"
+                self.depiction_of_the_human_body = "None"
 
         def change_entrance_requirement_strenght(self):
             if self.entrance_requirement_strenght == "None":
-                self.entrance_requirement_strenght = ""
-            elif self.entrance_requirement_strenght == "":
-                self.entrance_requirement_strenght = ""
-            elif self.entrance_requirement_strenght == "":
-                self.entrance_requirement_strenght = ""
-            elif self.entrance_requirement_strenght == "":
-                self.entrance_requirement_strenght = ""
+                self.entrance_requirement_strenght = "Age"
+            elif self.entrance_requirement_strenght == "Age":
+                self.entrance_requirement_strenght = "Standard"
+            elif self.entrance_requirement_strenght == "Standard":
+                self.entrance_requirement_strenght = "Advanced"
+            elif self.entrance_requirement_strenght == "Advanced":
+                self.entrance_requirement_strenght = "Perfect"
             else:
                 self.entrance_requirement_strenght = "None"
 
         def change_entrance_requirement_focus(self):
-            if self.entrance_requirement_focus == "Attitude":
-                self.entrance_requirement_focus = ""
-            elif self.entrance_requirement_focus == "":
-                self.entrance_requirement_focus = ""
-            elif self.entrance_requirement_focus == "":
-                self.entrance_requirement_focus = ""
-            elif self.entrance_requirement_focus == "":
-                self.entrance_requirement_focus = ""
-            else:
+            if self.entrance_requirement_focus == "Mixed":
+                self.entrance_requirement_focus = "Academic"
+            elif self.entrance_requirement_focus == "Academic":
+                self.entrance_requirement_focus = "Athletic"
+            elif self.entrance_requirement_focus == "Athletic":
                 self.entrance_requirement_focus = "Attitude"
+            elif self.entrance_requirement_focus == "Attitude":
+                self.entrance_requirement_focus = "Inhibition"
+            elif self.entrance_requirement_focus == "Inhibition":
+                self.entrance_requirement_focus = "Deviance"
+            else:
+                self.entrance_requirement_focus = "Mixed"
 
         def change_learning_materials(self):
             if self.learning_materials == "Old & Cheap":
@@ -183,16 +183,16 @@ init python:
                 self.learning_materials = "Old & Cheap"
 
         def change_staff_salary(self):
-            if self.salary == "Average":
-                self.salary = ""
-            elif self.salary == "":
-                self.salary = ""
-            elif self.salary == "":
-                self.salary = ""
-            elif self.salary == "":
-                self.salary = ""
+            if self.staff_salary == "Average":
+                self.staff_salary = ""
+            elif self.staff_salary == "":
+                self.staff_salary = ""
+            elif self.staff_salary == "":
+                self.staff_salary = ""
+            elif self.staff_salary == "":
+                self.staff_salary = ""
             else:
-                self.salary = "Average"
+                self.staff_salary = "Average"
 
         def change_class_size(self):
             if self.class_size == "Big":

@@ -208,8 +208,35 @@ screen security:
             text_color "#FFFFFF"  
 
 screen school_dresscode:
+    frame at move_from_middle_to_right:
+        xsize 0.25
+        yalign 0.025
+        background "#00000050"
+        vbox:
+            frame:
+                text "Current: [s.dresscode]"
+            if s.dresscode == "Conservative":
+                textbutton "The skirt must be longer than mid thigh. Bras and panties must be worn conervatively. All clothing must be opaque":
+                    action NullAction()
+                    text_color "#FFFFFF"
+            elif s.dresscode == "Normal":
+                textbutton "The skirt only covers the panties completely, while not being longer than mid-thigh.Normal bras and panties. All clothing must be opaque":
+                    action NullAction()
+                    text_color "#FFFFFF"
+            elif s.dresscode == "None":
+                textbutton "Students may wear any clothing whatsoever. Giving student more freedom to express themselves.":
+                    action NullAction()
+                    text_color "#FFFFFF"
+            elif s.dresscode == "Sexy":
+                textbutton "Top and bottom must shows a bit of panties and bras or just plain underwears. Swimsuits must cover very little skins":
+                    action NullAction()
+                    text_color "#FFFFFF"
+            elif s.dresscode == "Nude":
+                textbutton "No clothing allowed in school. No covering the breasts or pelvic area. Covering it up is prohibited":
+                    action NullAction()
+                    text_color "#FFFFFF"
     frame at fading:
-        xalign 0.985
+        xalign 0.45
         yalign 0.05
         xsize 0.5
         ysize 0.75
@@ -223,269 +250,276 @@ screen school_dresscode:
             add Frame("policies/dresscode_sexy.jpg", 8, 8, 8, 8, tile=False)
         elif s.dresscode == "Nude":
             add Frame("policies/dresscode_nude.jpg", 8, 8, 8, 8, tile=False)
-    frame at fading:
-        xalign 0.985
-        yalign 0.85
-        background Solid("#00000073")
-        textbutton "This change how your student should dress while in schoo\nor during events":
-            action NullAction()
-            text_color "#FFFFFF"
-    frame at fading:
-        xalign 0.5
-        yalign 0.5
-        if s.dresscode == "Conservative":
-            textbutton "The skirt must be\nlonger than mid thigh.\nBras and panties must be\ncut sonervatively\n All clothing must be opaque":
-                action NullAction()
-                text_color "#FFFFFF"
-        elif s.dresscode == "Normal":
-            textbutton "Students may wear\nany clothing whatsoever\nMakes for happy students.":
-                action NullAction()
-                text_color "#FFFFFF"
-        elif s.dresscode == "None":
-            textbutton "Students may wear\nany clothing whatsoever\nMakes for happy students.":
-                action NullAction()
-                text_color "#FFFFFF"
-        elif s.dresscode == "Sexy":
-            textbutton "Students may wear\nany clothing whatsoever\nMakes for happy students.":
-                action NullAction()
-                text_color "#FFFFFF"
-        elif s.dresscode == "Nude":
-            textbutton "Students may wear\nany clothing whatsoever\nMakes for happy students.":
-                action NullAction()
-                text_color "#FFFFFF"
-    frame at fading:
-        text "[s.dresscode]"
+    frame at move_from_middle_to_right:
+        xsize 0.25
+        yalign 0.725
+        background "#00000050"
+        text "This change how your student should dress while in school or during events"
 
 screen teacher_leeway:
+    frame at move_from_middle_to_right:
+        xsize 0.25
+        yalign 0.025
+        background "#00000050"
+        vbox:
+            frame:
+                text "Current: [s.teacher_leeway]"
+            if s.teacher_leeway == "None":
+                textbutton "No kind of aggression towards students is allowed. A bad if the students aren't obedient"
+            elif s.teacher_leeway == "Verbal Abuse":
+                textbutton "Verbal physical is allowed but no more than physical pushnishment"
+            elif s.teacher_leeway == "Physical Abuse":
+                textbutton "Teachers are allowed to use moderate violence. Students are warned that they might get expelled if they flaunt the rules"
+            elif s.teacher_leeway == "Spanking":
+                textbutton "Teachers are allowed to give spankings to misbehaving students. On average, parents are in favor of this."
+            elif s.teacher_leeway == "BDSM":
+                textbutton "Teachers are allowed to punish with any means be it by sexually harrasing them or doing some bdsm punishment"
+    frame at move_from_middle_to_right:
+        xsize 0.25
+        yalign 0.725
+        background "#00000050"
+        text "This show you amount of punishment are allowed to punish the students"
     frame at fading:
-        xalign 0.985
+        xalign 0.45
         yalign 0.05
+        xsize 0.5
+        ysize 0.75
         if s.teacher_leeway == "None":
-            add Frame("policies/no.png", 8, 8, 8, 8, tile=False):
-                xsize 0.5
-                ysize 0.75
+            add Frame("policies/no.png", 8, 8, 8, 8, tile=False)
         elif s.teacher_leeway == "Verbal Abuse":
-            add Frame("policies/teacher_leeway_verbal.jpg", 8, 8, 8, 8, tile=False):
-                xsize 0.5
-                ysize 0.75
+            add Frame("policies/teacher_leeway_verbal.jpg", 8, 8, 8, 8, tile=False)
         elif s.teacher_leeway == "Physical Abuse":
-            add Frame("policies/teacher_leeway_physical.jpg", 8, 8, 8, 8, tile=False):
-                xsize 0.5
-                ysize 0.75
+            add Frame("policies/teacher_leeway_physical.jpg", 8, 8, 8, 8, tile=False)
         elif s.teacher_leeway == "Spanking":
-            add Frame("policies/teacher_leeway_spanking.jpg", 8, 8, 8, 8, tile=False):
-                xsize 0.5
-                ysize 0.75
+            add Frame("policies/teacher_leeway_spanking.jpg", 8, 8, 8, 8, tile=False)
         elif s.teacher_leeway == "BDSM":
-            add Frame("policies/teacher_leeway_bdsm.jpg", 8, 8, 8, 8, tile=False):
-                xsize 0.5
-                ysize 0.75
-    frame at fading:
-        xalign 0.985
-        yalign 0.85
-        background Solid("#00000073")
-        textbutton "Amount of power/violence allowed to punish the students":
-            text_color "#FFFFFF"
-    frame at fading:
-        text "[s.teacher_leeway]"
+            add Frame("policies/teacher_leeway_bdsm.jpg", 8, 8, 8, 8, tile=False)
 
 screen depiction_of_the_human_body:
+    frame at move_from_middle_to_right:
+        xsize 0.25
+        yalign 0.025
+        background "#00000050"
+        vbox:
+            frame:
+                text "Current: [s.depiction_of_the_human_body]"
+            if s.depiction_of_the_human_body == "None":
+                text "Non sexualized version of the human body"
+            elif s.depiction_of_the_human_body == "Correct":
+                text "Usage of anatomically correct human models"
+            elif s.depiction_of_the_human_body == "Hyper Sexualized":
+                text "Using models based on porn stars, showing them in an aroused state"
+            elif s.depiction_of_the_human_body == "Live Models":
+                text "Pictures in books are obviously not enough. So there are 'voluteers' from the class to shwo their fellow students what the human body look like"
     frame at fading:
-        xalign 0.985
+        xalign 0.45
         yalign 0.05
+        xsize 0.5
+        ysize 0.75
         if s.depiction_of_the_human_body == "None":
-            add Frame("policies/human_anatomy_depiction_nonsexual.jpg", 8, 8, 8, 8, tile=False):
-                xsize 0.5
-                ysize 0.75
-        elif s.depiction_of_the_human_body == "":
-            add Frame("policies/human_anatomy_depiction_nonsexual.jpg", 8, 8, 8, 8, tile=False):
-                xsize 0.5
-                ysize 0.75
-        elif s.depiction_of_the_human_body == "":
-            add Frame("policies/human_anatomy_depiction_nonsexual.jpg", 8, 8, 8, 8, tile=False):
-                xsize 0.5
-                ysize 0.75
-        elif s.depiction_of_the_human_body == "":
-            add Frame("policies/human_anatomy_depiction_nonsexual.jpg", 8, 8, 8, 8, tile=False):
-                xsize 0.5
-                ysize 0.75
-        elif s.depiction_of_the_human_body == "":
-            add Frame("policies/human_anatomy_depiction_nonsexual.jpg", 8, 8, 8, 8, tile=False):
-                xsize 0.5
-                ysize 0.75
-    frame at fading:
-        xalign 0.985
-        yalign 0.85
-        background Solid("#00000073")
-        textbutton "How anatomically coorect should nude pictures be\nin teaching materials":
-            text_color "#FFFFFF"
-    frame at fading:
-        text "[s.depiction_of_the_human_body]"
+            add Frame("policies/human_anatomy_depiction_nonsexual.jpg", 8, 8, 8, 8, tile=False)
+        elif s.depiction_of_the_human_body == "Correct":
+            add Frame("policies/human_anatomy_depiction_correct.jpg", 8, 8, 8, 8, tile=False)
+        elif s.depiction_of_the_human_body == "Hyper Sexualized":
+            add Frame("policies/human_anatomy_depiction_hypersexualized.jpg", 8, 8, 8, 8, tile=False)
+        elif s.depiction_of_the_human_body == "Live Models":
+            add Frame("policies/human_anatomy_depiction_live_student_models.jpg", 8, 8, 8, 8, tile=False)
+    frame at move_from_middle_to_right:
+        xsize 0.25
+        yalign 0.725
+        background "#00000050"
+        text "How anatomically coorect should nude pictures be\nin teaching materials"
 
 screen entrance_requirement_strenght:
+    frame at move_from_middle_to_right:
+        xsize 0.25
+        yalign 0.025
+        background "#00000050"
+        vbox:
+            frame:
+                text "Current: [s.entrance_requirement_strenght]"
+            if s.entrance_requirement_strenght == "None":
+                text ""
+            elif s.entrance_requirement_strenght == "Age":
+                text ""
+            elif s.entrance_requirement_strenght == "Standard":
+                text ""
+            elif s.entrance_requirement_strenght == "Advanced":
+                text ""
+            elif s.entrance_requirement_strenght == "Perfect":
+                text ""
     frame at fading:
-        xalign 0.985
+        xalign 0.45
         yalign 0.05
+        xsize 0.5
+        ysize 0.75
         if s.entrance_requirement_strenght == "None":
-            add Frame("policies/entrance_req_strength_none.jpg", 8, 8, 8, 8, tile=False):
-                xsize 0.5
-                ysize 0.75
-        elif s.entrance_requirement_strenght == "":
-            add Frame("policies/entrance_req_strength_none.jpg", 8, 8, 8, 8, tile=False):
-                xsize 0.5
-                ysize 0.75
-        elif s.entrance_requirement_strenght == "":
-            add Frame("policies/entrance_req_strength_none.jpg", 8, 8, 8, 8, tile=False):
-                xsize 0.5
-                ysize 0.75
-        elif s.entrance_requirement_strenght == "":
-            add Frame("policies/entrance_req_strength_none.jpg", 8, 8, 8, 8, tile=False):
-                xsize 0.5
-                ysize 0.75
-        elif s.entrance_requirement_strenght == "":
-            add Frame("policies/entrance_req_strength_none.jpg", 8, 8, 8, 8, tile=False):
-                xsize 0.5
-                ysize 0.75
-    frame at fading:
-        xalign 0.985
-        yalign 0.85
-        background Solid("#00000073")
-        textbutton "What kind of student should we allowed or accept in school?":
-            text_color "#FFFFFF"
-    frame at fading:
-        text "[s.entrance_requirement_strenght]"
+            add Frame("policies/entrance_req_strength_none.jpg", 8, 8, 8, 8, tile=False)
+        elif s.entrance_requirement_strenght == "Age":
+            add Frame("policies/entrance_req_strength_age.jpg", 8, 8, 8, 8, tile=False)
+        elif s.entrance_requirement_strenght == "Standard":
+            add Frame("policies/entrance_req_strength_standard.jpg", 8, 8, 8, 8, tile=False)
+        elif s.entrance_requirement_strenght == "Advanced":
+            add Frame("policies/entrance_req_strength_advanced.jpg", 8, 8, 8, 8, tile=False)
+        elif s.entrance_requirement_strenght == "Perfect":
+            add Frame("policies/entrance_req_strength_perfect.jpg", 8, 8, 8, 8, tile=False)
+    frame at move_from_middle_to_right:
+        xsize 0.25
+        yalign 0.725
+        background "#00000050"
+        text "What kind of student should we allowed or accept in school?"
 
 screen entrance_requirement_focus:
+    frame at move_from_middle_to_right:
+        xsize 0.25
+        yalign 0.025
+        background "#00000050"
+        vbox:
+            frame:
+                text "Current: [s.entrance_requirement_focus]"
+            if s.entrance_requirement_focus == "":
+                text ""
+            elif s.entrance_requirement_focus == "":
+                text ""
+            elif s.entrance_requirement_focus == "":
+                text ""
+            elif s.entrance_requirement_focus == "":
+                text ""
+            elif s.entrance_requirement_focus == "":
+                text ""
     frame at fading:
-        xalign 0.985
+        xalign 0.45
         yalign 0.05
+        xsize 0.5
+        ysize 0.75
         if s.entrance_requirement_focus == "Attitude":
-            add Frame("policies/entrance_req_focus_attitude.jpg", 8, 8, 8, 8, tile=False):
-                xsize 0.5
-                ysize 0.75
+            add Frame("policies/entrance_req_focus_attitude.jpg", 8, 8, 8, 8, tile=False)
         elif s.entrance_requirement_focus == "":
-            add Frame("policies/entrance_req_focus_attitude.jpg", 8, 8, 8, 8, tile=False):
-                xsize 0.5
-                ysize 0.75
+            add Frame("policies/entrance_req_focus_attitude.jpg", 8, 8, 8, 8, tile=False)
         elif s.entrance_requirement_focus == "":
-            add Frame("policies/entrance_req_focus_attitude.jpg", 8, 8, 8, 8, tile=False):
-                xsize 0.5
-                ysize 0.75
+            add Frame("policies/entrance_req_focus_attitude.jpg", 8, 8, 8, 8, tile=False)
         elif s.entrance_requirement_focus == "":
-            add Frame("policies/entrance_req_focus_attitude.jpg", 8, 8, 8, 8, tile=False):
-                xsize 0.5
-                ysize 0.75
+            add Frame("policies/entrance_req_focus_attitude.jpg", 8, 8, 8, 8, tile=False)
         elif s.entrance_requirement_focus == "":
-            add Frame("policies/entrance_req_focus_attitude.jpg", 8, 8, 8, 8, tile=False):
-                xsize 0.5
-                ysize 0.75
-    frame at fading:
-        xalign 0.985
-        yalign 0.85
-        background Solid("#00000073")
-        textbutton "Which quality should we test our prospective students for?":
-            text_color "#FFFFFF"
-    frame at fading:
-        text "[s.entrance_requirement_focus]"
+            add Frame("policies/entrance_req_focus_attitude.jpg", 8, 8, 8, 8, tile=False)
+    frame at move_from_middle_to_right:
+        xsize 0.25
+        yalign 0.725
+        background "#00000050"
+        text "Which quality should we test our prospective students for?"
 
 screen learning_materials:
+    frame at move_from_middle_to_right:
+        xsize 0.25
+        yalign 0.025
+        background "#00000050"
+        vbox:
+            frame:
+                text "Current: [s.learning_materials]"
+            if s.learning_materials == "":
+                text ""
+            elif s.learning_materials == "":
+                text ""
+            elif s.learning_materials == "":
+                text ""
+            elif s.learning_materials == "":
+                text ""
+            elif s.learning_materials == "":
+                text ""
     frame at fading:
-        xalign 0.985
+        xalign 0.45
         yalign 0.05
+        xsize 0.5
+        ysize 0.75
         if s.learning_materials == "Old & Cheap":
-            add Frame("policies/teaching_materials_old.jpg", 8, 8, 8, 8, tile=False):
-                xsize 0.5
-                ysize 0.75
+            add Frame("policies/teaching_materials_old.jpg", 8, 8, 8, 8, tile=False)
         elif s.learning_materials == "":
-            add Frame("policies/teaching_materials_old.jpg", 8, 8, 8, 8, tile=False):
-                xsize 0.5
-                ysize 0.75
+            add Frame("policies/teaching_materials_old.jpg", 8, 8, 8, 8, tile=False)
         elif s.learning_materials == "":
-            add Frame("policies/teaching_materials_old.jpg", 8, 8, 8, 8, tile=False):
-                xsize 0.5
-                ysize 0.75
+            add Frame("policies/teaching_materials_old.jpg", 8, 8, 8, 8, tile=False)
         elif s.learning_materials == "":
-            add Frame("policies/teaching_materials_old.jpg", 8, 8, 8, 8, tile=False):
-                xsize 0.5
-                ysize 0.75
+            add Frame("policies/teaching_materials_old.jpg", 8, 8, 8, 8, tile=False)
         elif s.learning_materials == "":
-            add Frame("policies/teaching_materials_old.jpg", 8, 8, 8, 8, tile=False):
-                xsize 0.5
-                ysize 0.75
-    frame at fading:
-        xalign 0.985
-        yalign 0.85
-        background Solid("#00000073")
-        textbutton "Quality of learning materials available for teaching":
-            text_color "#FFFFFF"
-    frame at fading:
-        text "[s.learning_materials]"
+            add Frame("policies/teaching_materials_old.jpg", 8, 8, 8, 8, tile=False)
+    frame at move_from_middle_to_right:
+        xsize 0.25
+        yalign 0.725
+        background "#00000050"
+        text "Quality of learning materials available for teaching"
 
 screen staff_salary:
+    frame at move_from_middle_to_right:
+        xsize 0.25
+        yalign 0.025
+        background "#00000050"
+        vbox:
+            frame:
+                text "Current: [s.staff_salary]"
+            if s.staff_salary == "":
+                text ""
+            elif s.staff_salary == "":
+                text ""
+            elif s.staff_salary == "":
+                text ""
     frame at fading:
-        xalign 0.985
+        xalign 0.45
         yalign 0.05
+        xsize 0.5
+        ysize 0.75
         if s.staff_salary == "Average":
-            add Frame("policies/staff_salary_low.jpg", 8, 8, 8, 8, tile=False):
-                xsize 0.5
-                ysize 0.75
+            add Frame("policies/staff_salary_low.jpg", 8, 8, 8, 8, tile=False)
         elif s.staff_salary == "":
-            add Frame("policies/staff_salary_low.jpg", 8, 8, 8, 8, tile=False):
-                xsize 0.5
-                ysize 0.75
+            add Frame("policies/staff_salary_low.jpg", 8, 8, 8, 8, tile=False)
         elif s.staff_salary == "":
-            add Frame("policies/staff_salary_low.jpg", 8, 8, 8, 8, tile=False):
-                xsize 0.5
-                ysize 0.75
+            add Frame("policies/staff_salary_low.jpg", 8, 8, 8, 8, tile=False)
         elif s.staff_salary == "":
-            add Frame("policies/staff_salary_low.jpg", 8, 8, 8, 8, tile=False):
-                xsize 0.5
-                ysize 0.75
+            add Frame("policies/staff_salary_low.jpg", 8, 8, 8, 8, tile=False)
         elif s.staff_salary == "":
-            add Frame("policies/staff_salary_low.jpg", 8, 8, 8, 8, tile=False):
-                xsize 0.5
-                ysize 0.75
-    frame at fading:
-        xalign 0.985
-        yalign 0.85
-        background Solid("#00000073")
-        textbutton "Adjusting the salary of your teachers and co-workers":
-            text_color "#FFFFFF"
-    frame at fading:
-        text "[s.salary]"
+            add Frame("policies/staff_salary_low.jpg", 8, 8, 8, 8, tile=False)
+    frame at move_from_middle_to_right:
+        xsize 0.25
+        yalign 0.725
+        background "#00000050"
+        text "Adjusting the salary of your teachers and co-workers"
 
 screen class_size:
+    frame at move_from_middle_to_right:
+        xsize 0.25
+        yalign 0.025
+        background "#00000050"
+        vbox:
+            frame:
+                text "Current: [s.class_size]"
+            if s.class_size == "":
+                text ""
+            elif s.class_size == "":
+                text ""
+            elif s.class_size == "":
+                text ""
+            elif s.class_size == "":
+                text ""
+            elif s.class_size == "":
+                text ""
     frame at fading:
-        xalign 0.985
+        xalign 0.45
         yalign 0.05
+        xsize 0.5
+        ysize 0.75
         if s.class_size == "Big":
-            add Frame("policies/class_size_big.jpg", 8, 8, 8, 8, tile=False):
-                xsize 0.5
-                ysize 0.75
+            add Frame("policies/class_size_big.jpg", 8, 8, 8, 8, tile=False)
         elif s.class_size == "":
-            add Frame("policies/class_size_big.jpg", 8, 8, 8, 8, tile=False):
-                xsize 0.5
-                ysize 0.75
+            add Frame("policies/class_size_big.jpg", 8, 8, 8, 8, tile=False)
         elif s.class_size == "":
-            add Frame("policies/class_size_big.jpg", 8, 8, 8, 8, tile=False):
-                xsize 0.5
-                ysize 0.75
+            add Frame("policies/class_size_big.jpg", 8, 8, 8, 8, tile=False)
         elif s.class_size == "":
-            add Frame("policies/class_size_big.jpg", 8, 8, 8, 8, tile=False):
-                xsize 0.5
-                ysize 0.75
+            add Frame("policies/class_size_big.jpg", 8, 8, 8, 8, tile=False)
         elif s.class_size == "":
-            add Frame("policies/class_size_big.jpg", 8, 8, 8, 8, tile=False):
-                xsize 0.5
-                ysize 0.75
-    frame at fading:
-        xalign 0.985
-        yalign 0.85
-        background Solid("#00000073")
-        textbutton "How many students should be in each class at most?":
-            text_color "#FFFFFF"
-    frame at fading:
-        text "[s.class_size]"
+            add Frame("policies/class_size_big.jpg", 8, 8, 8, 8, tile=False)
+    frame at move_from_middle_to_right:
+        xsize 0.25
+        yalign 0.725
+        background "#00000050"
+        text "How many students should be in each class at most?"
 
 screen placeholder_text:
     default displayText = ""
@@ -634,13 +668,13 @@ transform move_from_right_cost:
         xalign 0.895 alpha 1.0
         linear 0.25 xalign 0.875 alpha 0.0
 
-transform move_from_top2:
+transform move_from_middle_to_right:
     on show:
-        yalign -0.5 alpha 0.0
-        linear 0.5 yalign 0.0 alpha 1.0
+        xalign 0.5 alpha 0.0
+        linear 0.5 xalign 0.985 alpha 1.0
     on hide:
-        yalign 0.0 alpha 1.0
-        linear 0.5 yalign -0.5 alpha 0.0
+        xalign 0.985 alpha 1.0
+        linear 0.25 alpha 0.05 #xalign 0.5 
 
 init python:
     # Functions custom_textbutton #

@@ -437,12 +437,12 @@ screen Buildings:
                 style "custom_textbutton0"         
 
 screen Policies:
-    vbox at move_from_top2:
+    vbox at move_from_left:
         spacing 5
         frame:
             xsize 0.2
             ysize 0.1
-            xalign 0.5
+            xalign 1.0
             textbutton "School Policies":
                 action NullAction()
                 text_color "#FFFFFF"
@@ -451,7 +451,7 @@ screen Policies:
         frame:
             xalign 1.0
             textbutton "Dresscode":
-                action Jump("Policies_Options_dresscode_check")
+                action Jump("dresscode_check")
                 hovered Show("school_dresscode")
                 unhovered Hide("school_dresscode")
                 text_style "custom_textbutton_text0"
@@ -459,31 +459,31 @@ screen Policies:
         frame:
             xalign 1.0
             textbutton "Teacher Leeway":
-                action Jump("Policies_Options_teacher_leeway_check")
+                action Jump("teacher_leeway_check")
                 hovered Show("teacher_leeway")
                 unhovered Hide("teacher_leeway")
                 text_style "custom_textbutton_text0"
                 style "custom_textbutton0"
         frame:
             xalign 1.0
-            textbutton "Depiction of the human body":
-                action Show("depiction_of_the_human_body_check")
+            textbutton "Depiction of the\nhuman body":
+                action Jump("depiction_of_the_human_body_check")
                 hovered Show("depiction_of_the_human_body")
                 unhovered Hide("depiction_of_the_human_body")
                 text_style "custom_textbutton_text0"
                 style "custom_textbutton0"
         frame:
             xalign 1.0
-            textbutton "Entrance requirement strenght":
-                action Show("entrance_requirement_strenght_check")
+            textbutton "Entrance\nrequirement\nstrenght":
+                action Jump("entrance_requirement_strenght_check")
                 hovered Show("entrance_requirement_strenght")
                 unhovered Hide("entrance_requirement_strenght")
                 text_style "custom_textbutton_text0"
                 style "custom_textbutton0"
         frame:
             xalign 1.0
-            textbutton "Entrance requirement focus":
-                action Show("entrance_requirement_focus")
+            textbutton "Entrance\nrequirement focus":
+                action Jump("entrance_requirement_focus")
                 hovered Show("entrance_requirement_focus")
                 unhovered Hide("entrance_requirement_focus")
                 text_style "custom_textbutton_text0"
@@ -491,7 +491,7 @@ screen Policies:
         frame:
             xalign 1.0
             textbutton "Learning materials":
-                action Show("learning_materials_check")
+                action Jump("learning_materials_check")
                 hovered Show("learning_materials")
                 unhovered Hide("learning_materials")
                 text_style "custom_textbutton_text0"
@@ -499,7 +499,7 @@ screen Policies:
         frame:
             xalign 1.0
             textbutton "Staff salary":
-                action Show("staff_salary_check")
+                action Jump("staff_salary_check")
                 hovered Show("staff_salary")
                 unhovered Hide("staff_salary")
                 text_style "custom_textbutton_text0"
@@ -507,7 +507,7 @@ screen Policies:
         frame:
             xalign 1.0
             textbutton "Class size":
-                action Show("class_size_checl")
+                action Jump("class_size_checl")
                 hovered Show("class_size")
                 unhovered Hide("class_size")
                 text_style "custom_textbutton_text0"
@@ -515,8 +515,6 @@ screen Policies:
         frame:
             xalign 1.0
             textbutton "Back":
-                action [Hide("school_dresscode"), Hide("teacher_leeway"), Hide("depiction_of_the_human_body"), 
-                Hide("entrance_requirement_strenght"), Hide("entrance_requirement_focus"),
-                Hide("learning_materials"), Hide("staff_salary"), Hide("class_size"),Jump("Your_Office")]
+                action Jump("Your_Office")
                 text_style "custom_textbutton_text0"
                 style "custom_textbutton0"         

@@ -52,11 +52,11 @@ label Policies:
     pause
     jump Policies
 
-label Policies_Options_teacher_leeway_check:
+label teacher_leeway_check:
     $ s.change_teacher_leeway()
     jump Policies
 
-label Policies_Options_dresscode_check:
+label dresscode_check:
     $ s.change_dresscode()
     jump Policies
 
